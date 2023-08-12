@@ -1,6 +1,5 @@
 package com.fullcycle.admin.catalogo.domain.category;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,5 +25,4 @@ class CategoryTest {
         assertNull(actualCategory.getDeletedAt());
 
     }
-
 }
