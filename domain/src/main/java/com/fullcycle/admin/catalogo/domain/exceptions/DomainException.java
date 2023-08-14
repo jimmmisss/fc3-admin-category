@@ -1,4 +1,4 @@
-package com.fullcycle.admin.catalogo.domain.exception;
+package com.fullcycle.admin.catalogo.domain.exceptions;
 
 import com.fullcycle.admin.catalogo.domain.validation.Error;
 
