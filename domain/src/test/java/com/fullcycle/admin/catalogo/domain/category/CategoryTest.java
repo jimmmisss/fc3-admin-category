@@ -26,7 +26,6 @@ class CategoryTest {
         assertNotNull(actualCategory.getCreatedAt());
         assertNotNull(actualCategory.getUpdatedAt());
         assertNull(actualCategory.getDeletedAt());
-
     }
 
     @Test
@@ -45,7 +44,6 @@ class CategoryTest {
 
         assertEquals(expectedErrorCount, actualException.getErrors().size());
         assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
-
     }
 
     @Test
