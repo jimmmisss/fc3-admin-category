@@ -2,13 +2,15 @@ package com.fullcycle.admin.catalogo.domain.category;
 
 import com.fullcycle.admin.catalogo.domain.pagination.Pagination;
 
+import java.util.Optional;
+
 public interface CategoryGateway {
 
     Category create(Category aCategory);
 
     Category delete(CategoryID anId);
 
-    Category findById(CategoryID anId);
+    Optional<Category> findById(CategoryID anId);
 
     Category update(Category aCategory);
 

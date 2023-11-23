@@ -118,7 +118,6 @@ public class CreateCategoryUseCaseTest {
         Mockito.when(categoryGateway.create(any()))
                 .thenThrow(new IllegalStateException(expectedErrorMessage));
 
-
         final var notification = useCase.execute(aCommand).getLeft();
 
         assertEquals(expectedErrorCount, notification.getErrors().size());
