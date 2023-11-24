@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Application layer tests use case update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/category/update/DefaultUpdateCategoryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/category/update/DefaultUpdateCategoryUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/fullcycle/admin/catalogo/application/category/update/UpdateCategoryUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/fullcycle/admin/catalogo/application/category/update/UpdateCategoryUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/Category.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +260,7 @@
       <workItem from="1700567391297" duration="2133000" />
       <workItem from="1700680880963" duration="7000" />
       <workItem from="1700686278521" duration="16226000" />
-      <workItem from="1700840612254" duration="9241000" />
+      <workItem from="1700840612254" duration="10189000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -313,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700780382776</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Full Cycle 3 - Application layer tests use case update">
+      <option name="closed" value="true" />
+      <created>1700849991328</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700849991328</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
