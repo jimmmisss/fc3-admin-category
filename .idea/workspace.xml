@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer profiles config">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application-production.yml" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer database">
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration/V1__Initial.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +272,7 @@
       <workItem from="1701082386628" duration="3164000" />
       <workItem from="1701124539668" duration="3499000" />
       <workItem from="1701167293413" duration="3592000" />
-      <workItem from="1701264589553" duration="1426000" />
+      <workItem from="1701264589553" duration="3162000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -387,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701168100926</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Full Cycle 3 - Infrastructure layer database">
+      <option name="closed" value="true" />
+      <created>1701267131738</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701267131738</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +415,7 @@
     <MESSAGE value="Full Cycle 3 - Application layer tests use case list categories" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer profiles config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer profiles config" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure layer database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer database" />
   </component>
 </project>
