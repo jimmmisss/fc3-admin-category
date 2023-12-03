@@ -5,8 +5,8 @@ import com.fullcycle.admin.catalogo.domain.category.CategoryGateway;
 import com.fullcycle.admin.catalogo.domain.category.CategoryID;
 import com.fullcycle.admin.catalogo.domain.pagination.Pagination;
 import com.fullcycle.admin.catalogo.domain.pagination.SearchQuery;
-import com.fullcycle.admin.catalogo.infrastructure.category.persistency.CategoryJpaEntity;
-import com.fullcycle.admin.catalogo.infrastructure.category.persistency.CategoryRepository;
+import com.fullcycle.admin.catalogo.infrastructure.category.persistence.CategoryJpaEntity;
+import com.fullcycle.admin.catalogo.infrastructure.category.persistence.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class CategoryMySQLGateway implements CategoryGateway {
 
     @Override
     public Category create(final Category aCategory) {
-        return repository.save(CategoryJpaEntity.from(aCategory)).toAggregate();
+        return save(aCategory);
     }
 
     @Override
@@ -37,11 +37,15 @@ public class CategoryMySQLGateway implements CategoryGateway {
 
     @Override
     public Category update(Category aCategory) {
-        return null;
+        return this.save(aCategory);
     }
 
     @Override
     public Pagination<Category> findAll(SearchQuery aQuery) {
         return null;
+    }
+
+    private Category save(Category category) {
+        return repository.save(CategoryJpaEntity.from(category)).toAggregate();
     }
 }
