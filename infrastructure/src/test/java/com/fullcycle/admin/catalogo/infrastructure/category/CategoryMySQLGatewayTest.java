@@ -82,7 +82,6 @@ public class CategoryMySQLGatewayTest {
         Assertions.assertEquals(1, repository.count());
 
         Assertions.assertEquals(aUpdatedcategory.getId(), actualCategory.getId());
-        Assertions.assertEquals(aUpdatedcategory.getId(), actualCategory.getId());
         Assertions.assertEquals(expectedName, actualCategory.getName());
         Assertions.assertEquals(expectedDescription, actualCategory.getDescription());
         Assertions.assertEquals(expectedIsActive, actualCategory.isActive());
@@ -125,5 +124,42 @@ public class CategoryMySQLGatewayTest {
         gateway.deleteById(CategoryID.from("invalid-id"));
 
         Assertions.assertEquals(0, repository.count());
+    }
+
+    @Test
+    public void givenAPrePersistedCategoryAndValidCategoryId_whenCallsFindById_shouldReturnCategory() {
+        final var expectedName = "Filmes";
+        final var expectedDescription = "A categoria mais assistida";
+        final var expectedIsActive = true;
+
+        final var aCategory = Category.newCategory(expectedName, expectedDescription, expectedIsActive);
+
+        Assertions.assertEquals(0, repository.count());
+
+        repository.saveAndFlush(CategoryJpaEntity.from(aCategory));
+
+        Assertions.assertEquals(1, repository.count());
+
+        final var actualCategory = gateway.findById(aCategory.getId()).get();
+
+        Assertions.assertEquals(1, repository.count());
+
+        Assertions.assertEquals(aCategory.getId(), actualCategory.getId());
+        Assertions.assertEquals(expectedName, actualCategory.getName());
+        Assertions.assertEquals(expectedDescription, actualCategory.getDescription());
+        Assertions.assertEquals(expectedIsActive, actualCategory.isActive());
+        Assertions.assertEquals(aCategory.getCreatedAt(), actualCategory.getCreatedAt());
+        Assertions.assertEquals(aCategory.getUpdatedAt(), actualCategory.getUpdatedAt());
+        Assertions.assertEquals(aCategory.getDeletedAt(), actualCategory.getDeletedAt());
+        Assertions.assertNull(actualCategory.getDeletedAt());
+    }
+
+    @Test
+    public void givenValidCategoryIdNotStored_whenCallsFindById_shouldReturnEmpty() {
+        Assertions.assertEquals(0, repository.count());
+
+        final var actualCategory = gateway.findById(CategoryID.from("invalid-id"));
+
+        Assertions.assertTrue(actualCategory.isEmpty());
     }
 }
