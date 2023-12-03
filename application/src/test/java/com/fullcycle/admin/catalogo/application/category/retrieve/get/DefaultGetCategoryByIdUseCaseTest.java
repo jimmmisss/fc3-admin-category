@@ -20,10 +20,10 @@ import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class DefaultGetCategoryUseCaseTest {
+public class DefaultGetCategoryByIdUseCaseTest {
 
     @InjectMocks
-    private DefaultGetcategoryUseCase useCase;
+    private DefaultGetCategoryByIdUseCase useCase;
 
     @Mock
     private CategoryGateway categoryGateway;

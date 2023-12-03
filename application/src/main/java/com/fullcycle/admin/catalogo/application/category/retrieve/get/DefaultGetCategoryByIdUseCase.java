@@ -8,11 +8,11 @@ import com.fullcycle.admin.catalogo.domain.validation.Error;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-public class DefaultGetcategoryUseCase extends GetCategoryUseCase {
+public class DefaultGetCategoryByIdUseCase extends GetCategoryByIdUseCase {
 
     private final CategoryGateway categoryGateway;
 
-    public DefaultGetcategoryUseCase(final CategoryGateway categoryGateway) {
+    public DefaultGetCategoryByIdUseCase(final CategoryGateway categoryGateway) {
         this.categoryGateway = Objects.requireNonNull(categoryGateway);
     }
 
