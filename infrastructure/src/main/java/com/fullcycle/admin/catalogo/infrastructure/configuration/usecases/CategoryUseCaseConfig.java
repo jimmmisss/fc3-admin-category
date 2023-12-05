@@ -12,7 +12,9 @@ import com.fullcycle.admin.catalogo.application.category.update.DefaultUpdateCat
 import com.fullcycle.admin.catalogo.application.category.update.UpdateCategoryUseCase;
 import com.fullcycle.admin.catalogo.domain.category.CategoryGateway;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class CategoryUseCaseConfig {
 
     private final CategoryGateway gateway;
