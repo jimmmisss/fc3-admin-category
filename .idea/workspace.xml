@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - connect infra with application inject bean">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/CleanUpExtensions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/IntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/create/CreateCategoryUseCaseIT.java" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete">
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/delete/CreateCategoryUseCaseIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/GetCategoryByIdUseCaseIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/application/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/category/delete/DefaultDeleteCategoryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/category/delete/DefaultDeleteCategoryUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/WebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/WebServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/usecases/CategoryUseCaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/usecases/CategoryUseCaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/MySQLGatewayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/MySQLGatewayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/category/CategoryMySQLGatewayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/category/CategoryMySQLGatewayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/category/persistence/CategoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/category/persistence/CategoryRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +76,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.GetCategoryByIdUseCaseIT.executor": "Run",
+    "Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor": "Run",
+    "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor": "Run",
+    "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -98,12 +92,16 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/projects/java/fc3-admin-category/infrastructure/src/test/java/com/fullcycle/admin/catalogo",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projects/java/design-patterns",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   },
@@ -138,107 +136,12 @@
       <recent name="com.fullcycle.admin.catalogo.domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fullcycle.admin.catalogo.application.category.delete" />
       <recent name="com.fullcycle.admin.catalogo" />
       <recent name="com.fullcycle.admin.catalogo.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CreateCategoryUseCaseIT.givenAValidId_whenCallsDeleteCategory_shouldBeOK">
-    <configuration name="CategoryMySQLGatewayTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.category.CategoryMySQLGatewayTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="CategoryMySQLGatewayTest.givenAPrePersistedCategoryAndValidCategoryId_whenCallsFindById_shouldReturnCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.category.CategoryMySQLGatewayTest.givenAPrePersistedCategoryAndValidCategoryId_whenCallsFindById_shouldReturnCategory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="CategoryMySQLGatewayTest.givenPrePersistedCategories_whenCallsFindAll_shouldReturnPaginated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.category.CategoryMySQLGatewayTest.givenPrePersistedCategories_whenCallsFindAll_shouldReturnPaginated&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="CategoryMySQLGatewayTest.givenValidCategoryIdNotStored_whenCallsFindById_shouldReturnEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.category.CategoryMySQLGatewayTest.givenValidCategoryIdNotStored_whenCallsFindById_shouldReturnEmpty&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory">
     <configuration name="CreateCategoryUseCaseIT.givenAValidId_whenCallsDeleteCategory_shouldBeOK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -263,6 +166,102 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="GetCategoryByIdUseCaseIT" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":infrastructure:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":infrastructure:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":infrastructure:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":infrastructure:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="fc3-admin-catalogo.infrastructure.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fullcycle.admin.catalogo.infrastructure.Main" />
@@ -272,13 +271,20 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory" />
+        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT" />
+        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException" />
+        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound" />
         <item itemvalue="Gradle.CreateCategoryUseCaseIT.givenAValidId_whenCallsDeleteCategory_shouldBeOK" />
-        <item itemvalue="Gradle.CategoryMySQLGatewayTest" />
-        <item itemvalue="Gradle.CategoryMySQLGatewayTest.givenPrePersistedCategories_whenCallsFindAll_shouldReturnPaginated" />
-        <item itemvalue="Gradle.CategoryMySQLGatewayTest.givenAPrePersistedCategoryAndValidCategoryId_whenCallsFindById_shouldReturnCategory" />
-        <item itemvalue="Gradle.CategoryMySQLGatewayTest.givenValidCategoryIdNotStored_whenCallsFindById_shouldReturnEmpty" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-8f899f12" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -330,7 +336,18 @@
       <workItem from="1701535945511" duration="1457000" />
       <workItem from="1701537422035" duration="5228000" />
       <workItem from="1701603119349" duration="16096000" />
-      <workItem from="1701731507165" duration="4026000" />
+      <workItem from="1701731507165" duration="4363000" />
+      <workItem from="1701810755147" duration="74000" />
+      <workItem from="1701975732965" duration="38000" />
+      <workItem from="1701975849970" duration="1843000" />
+      <workItem from="1702462783399" duration="1297000" />
+      <workItem from="1703104917202" duration="62000" />
+      <workItem from="1703105051089" duration="1935000" />
+      <workItem from="1703269558922" duration="3000" />
+      <workItem from="1703511293349" duration="600000" />
+      <workItem from="1703599882355" duration="597000" />
+      <workItem from="1704028339430" duration="465000" />
+      <workItem from="1704149832322" duration="3326000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -516,11 +533,30 @@
       <option name="project" value="LOCAL" />
       <updated>1701627840647</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete">
+      <option name="closed" value="true" />
+      <created>1701736381220</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1701736381220</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -546,7 +582,8 @@
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository findById" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository search and pagination with specification" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application inject bean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - connect infra with application inject bean" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
