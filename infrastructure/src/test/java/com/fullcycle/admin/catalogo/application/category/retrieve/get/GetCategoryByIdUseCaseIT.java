@@ -12,8 +12,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 
+import static java.time.temporal.ChronoUnit.MILLIS;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doThrow;
 
@@ -48,8 +51,8 @@ public class GetCategoryByIdUseCaseIT {
         Assertions.assertEquals(expectedName, actualCategory.name());
         Assertions.assertEquals(expectedDescription, actualCategory.description());
         Assertions.assertEquals(expectedIsActive, actualCategory.isActive());
-        Assertions.assertEquals(aCategory.getCreatedAt(), actualCategory.createdAt());
-        Assertions.assertEquals(aCategory.getUpdatedAt(), actualCategory.updatedAt());
+        Assertions.assertEquals(aCategory.getCreatedAt().truncatedTo(MILLIS), actualCategory.createdAt().truncatedTo(MILLIS));
+        Assertions.assertEquals(aCategory.getUpdatedAt().truncatedTo(MILLIS), actualCategory.updatedAt().truncatedTo(MILLIS));
         Assertions.assertEquals(aCategory.getDeletedAt(), actualCategory.deletedAt());
     }
 

@@ -129,4 +129,8 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable {
             throw new AssertionError(e);
         }
     }
+
+    public static void main(String[] args) {
+
+    }
 }

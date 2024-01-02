@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/delete/CreateCategoryUseCaseIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/GetCategoryByIdUseCaseIT.java" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/GetCategoryByIdUseCaseIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/GetCategoryByIdUseCaseIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +80,7 @@
     "Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor": "Run",
     "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor": "Run",
     "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException.executor": "Run",
+    "Gradle.fc3-admin-category:infrastructure [:infrastructure:GetCategoryByIdUseCaseIT.main()].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -141,30 +142,19 @@
       <recent name="com.fullcycle.admin.catalogo.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory">
-    <configuration name="CreateCategoryUseCaseIT.givenAValidId_whenCallsDeleteCategory_shouldBeOK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.application.category.create.CreateCategoryUseCaseIT.givenAValidId_whenCallsDeleteCategory_shouldBeOK&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="Application.GetCategoryByIdUseCaseIT">
+    <configuration name="GetCategoryByIdUseCaseIT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT" />
+      <module name="fc3-admin-catalogo.infrastructure.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fullcycle.admin.catalogo.application.category.retrieve.get.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="GetCategoryByIdUseCaseIT" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -271,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory" />
+        <item itemvalue="Application.GetCategoryByIdUseCaseIT" />
         <item itemvalue="Gradle.GetCategoryByIdUseCaseIT" />
+        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory" />
         <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException" />
         <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound" />
-        <item itemvalue="Gradle.CreateCategoryUseCaseIT.givenAValidId_whenCallsDeleteCategory_shouldBeOK" />
       </list>
     </recent_temporary>
   </component>
@@ -347,7 +337,9 @@
       <workItem from="1703511293349" duration="600000" />
       <workItem from="1703599882355" duration="597000" />
       <workItem from="1704028339430" duration="465000" />
-      <workItem from="1704149832322" duration="3326000" />
+      <workItem from="1704149832322" duration="4003000" />
+      <workItem from="1704208675103" duration="1115000" />
+      <workItem from="1704211777283" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -541,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701736381220</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT">
+      <option name="closed" value="true" />
+      <created>1704153353424</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1704153353424</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +583,8 @@
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository search and pagination with specification" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application inject bean" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
