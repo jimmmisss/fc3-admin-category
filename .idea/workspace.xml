@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT">
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT - Correction of date accuracy with Intant now">
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/list/ListCategoriesUseCaseIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/delete/CreateCategoryUseCaseIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/delete/DeleteCategoryUseCaseIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/GetCategoryByIdUseCaseIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/GetCategoryByIdUseCaseIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="fc3-admin-catalogo" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="fc3-admin-catalogo" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="fc3-admin-catalogo" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -76,10 +93,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.DeleteCategoryUseCaseIT.executor": "Run",
     "Gradle.GetCategoryByIdUseCaseIT.executor": "Run",
     "Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor": "Run",
     "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor": "Run",
     "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered.executor": "Debug",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenTermDoesntMatchsPrePersisted_shouldReturnEmptyPage.executor": "Debug",
+    "Gradle.fc3-admin-category [test].executor": "Run",
     "Gradle.fc3-admin-category:infrastructure [:infrastructure:GetCategoryByIdUseCaseIT.main()].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -142,21 +166,8 @@
       <recent name="com.fullcycle.admin.catalogo.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetCategoryByIdUseCaseIT">
-    <configuration name="GetCategoryByIdUseCaseIT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT" />
-      <module name="fc3-admin-catalogo.infrastructure.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fullcycle.admin.catalogo.application.category.retrieve.get.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetCategoryByIdUseCaseIT" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated">
+    <configuration name="ListCategoriesUseCaseIT" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +180,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +191,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +204,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,7 +215,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -217,7 +228,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,7 +239,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ListCategoriesUseCaseIT.givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -241,7 +252,31 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT.givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ListCategoriesUseCaseIT.givenAValidTerm_whenTermDoesntMatchsPrePersisted_shouldReturnEmptyPage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":infrastructure:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT.givenAValidTerm_whenTermDoesntMatchsPrePersisted_shouldReturnEmptyPage&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -261,18 +296,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetCategoryByIdUseCaseIT" />
-        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT" />
-        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory" />
-        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException" />
-        <item itemvalue="Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenTermDoesntMatchsPrePersisted_shouldReturnEmptyPage" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseIT" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-8f899f12" />
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
       </set>
     </attachedChunks>
   </component>
@@ -339,7 +374,8 @@
       <workItem from="1704028339430" duration="465000" />
       <workItem from="1704149832322" duration="4003000" />
       <workItem from="1704208675103" duration="1115000" />
-      <workItem from="1704211777283" duration="1823000" />
+      <workItem from="1704211777283" duration="10944000" />
+      <workItem from="1704242790420" duration="3624000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -541,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704153353424</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT - Correction of date accuracy with Intant now">
+      <option name="closed" value="true" />
+      <created>1704215839040</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1704215839040</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +628,8 @@
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application inject bean" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT - Correction of date accuracy with Intant now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT - Correction of date accuracy with Intant now" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
