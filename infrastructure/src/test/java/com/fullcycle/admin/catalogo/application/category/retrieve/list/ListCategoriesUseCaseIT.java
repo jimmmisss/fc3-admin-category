@@ -12,6 +12,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.Instant;
+import java.util.List;
 import java.util.stream.Stream;
 
 @IntegrationTest
@@ -24,7 +26,7 @@ public class ListCategoriesUseCaseIT {
     private CategoryRepository categoryRepository;
 
     @BeforeEach
-    void mockUp() {
+    void mockUp() throws InterruptedException {
         final var categories = Stream.of(
                         Category.newCategory("Filmes", null, true),
                         Category.newCategory("Netflix Originals", "Títulos de autoria da Netflix", true),
@@ -37,7 +39,11 @@ public class ListCategoriesUseCaseIT {
                 .map(CategoryJpaEntity::from)
                 .toList();
 
-        categoryRepository.saveAllAndFlush(categories);
+        for (CategoryJpaEntity category : categories) {
+            category.setCreatedAt(Instant.now());
+            categoryRepository.saveAndFlush(category);
+            Thread.sleep(100);
+        }
     }
 
     @Test
@@ -50,8 +56,7 @@ public class ListCategoriesUseCaseIT {
         final var expectedItemsCount = 0;
         final var expectedTotal = 0;
 
-        final var aQuery =
-                new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
+        final var aQuery = new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
 
         final var actualResult = useCase.execute(aQuery);
 
@@ -70,21 +75,15 @@ public class ListCategoriesUseCaseIT {
             "crianças,0,10,1,1,Kids",
             "da Amazon,0,10,1,1,Amazon Originals",
     })
-    public void givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered(
-            final String expectedTerms,
-            final int expectedPage,
-            final int expectedPerPage,
-            final int expectedItemsCount,
-            final long expectedTotal,
-            final String expectedCategoryName
-    ) {
+    public void givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered(final String expectedTerms, final int expectedPage, final int expectedPerPage, final int expectedItemsCount, final long expectedTotal, final String expectedCategoryName) {
         final var expectedSort = "name";
         final var expectedDirection = "asc";
 
-        final var aQuery =
-                new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
+        final var aQuery = new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
 
         final var actualResult = useCase.execute(aQuery);
+
+        categoryRepository.findAll();
 
         Assertions.assertEquals(expectedItemsCount, actualResult.items().size());
         Assertions.assertEquals(expectedPage, actualResult.currentPage());
@@ -111,8 +110,7 @@ public class ListCategoriesUseCaseIT {
     ) {
         final var expectedTerms = "";
 
-        final var aQuery =
-                new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
+        final var aQuery = new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
 
         final var actualResult = useCase.execute(aQuery);
 
@@ -126,23 +124,15 @@ public class ListCategoriesUseCaseIT {
     @ParameterizedTest
     @CsvSource({
             "0,2,2,7,Amazon Originals;Documentários",
-            "1,2,2,7,Filmes;Kids",
-            "2,2,2,7,Netflix Originals;Series",
+            "1,2,2,7,Filmes;Kids", "2,2,2,7,Netflix Originals;Series",
             "3,2,1,7,Sports",
     })
-    public void givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated(
-            final int expectedPage,
-            final int expectedPerPage,
-            final int expectedItemsCount,
-            final long expectedTotal,
-            final String expectedCategoriesName
-    ) {
+    public void givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated(final int expectedPage, final int expectedPerPage, final int expectedItemsCount, final long expectedTotal, final String expectedCategoriesName) {
         final var expectedSort = "name";
         final var expectedDirection = "asc";
         final var expectedTerms = "";
 
-        final var aQuery =
-                new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
+        final var aQuery = new SearchQuery(expectedPage, expectedPerPage, expectedTerms, expectedSort, expectedDirection);
 
         final var actualResult = useCase.execute(aQuery);
 
