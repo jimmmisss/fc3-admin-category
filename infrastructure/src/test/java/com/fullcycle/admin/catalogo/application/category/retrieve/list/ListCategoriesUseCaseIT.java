@@ -13,7 +13,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.Instant;
-import java.util.List;
 import java.util.stream.Stream;
 
 @IntegrationTest
@@ -75,7 +74,14 @@ public class ListCategoriesUseCaseIT {
             "crianças,0,10,1,1,Kids",
             "da Amazon,0,10,1,1,Amazon Originals",
     })
-    public void givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered(final String expectedTerms, final int expectedPage, final int expectedPerPage, final int expectedItemsCount, final long expectedTotal, final String expectedCategoryName) {
+    public void givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered(
+            final String expectedTerms,
+            final int expectedPage,
+            final int expectedPerPage,
+            final int expectedItemsCount,
+            final long expectedTotal,
+            final String expectedCategoryName
+    ) {
         final var expectedSort = "name";
         final var expectedDirection = "asc";
 
@@ -127,7 +133,13 @@ public class ListCategoriesUseCaseIT {
             "1,2,2,7,Filmes;Kids", "2,2,2,7,Netflix Originals;Series",
             "3,2,1,7,Sports",
     })
-    public void givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated(final int expectedPage, final int expectedPerPage, final int expectedItemsCount, final long expectedTotal, final String expectedCategoriesName) {
+    public void givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated(
+            final int expectedPage,
+            final int expectedPerPage,
+            final int expectedItemsCount,
+            final long expectedTotal,
+            final String expectedCategoriesName
+    ) {
         final var expectedSort = "name";
         final var expectedDirection = "asc";
         final var expectedTerms = "";
