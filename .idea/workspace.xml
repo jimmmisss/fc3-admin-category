@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - Correction to totalElements">
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - ident">
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/ObjectMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/json/Json.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/ControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/list/ListCategoriesUseCaseIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/retrieve/list/ListCategoriesUseCaseIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +120,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/projects/java/design-patterns",
+    "last_opened_file_path": "C:/projects/java/fc3-admin-category/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,6 +147,7 @@
       <recent name="com.fullcycle.admin.catalogo.domain.category.pagination" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\java\fc3-admin-category\infrastructure\src\main\java\com\fullcycle\admin\catalogo\infrastructure\configuration" />
       <recent name="C:\projects\java\fc3-admin-category\infrastructure\src\main\resources\db\migration" />
       <recent name="C:\projects\java\fc3-admin-category\infrastructure\src\main\resources" />
       <recent name="C:\projects\java\fc3-admin-category" />
@@ -165,7 +169,7 @@
       <recent name="com.fullcycle.admin.catalogo.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered">
+  <component name="RunManager" selected="Gradle.fc3-admin-category [test]">
     <configuration name="ListCategoriesUseCaseIT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" />
       <module name="fc3-admin-catalogo.infrastructure.test" />
@@ -193,30 +197,6 @@
             <option value=":infrastructure:test" />
             <option value="--tests" />
             <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -275,6 +255,28 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="fc3-admin-category [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="fc3-admin-catalogo.infrastructure.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fullcycle.admin.catalogo.infrastructure.Main" />
@@ -284,11 +286,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.fc3-admin-category [test]" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseIT" />
         <item itemvalue="Gradle.ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered" />
         <item itemvalue="Application.ListCategoriesUseCaseIT" />
         <item itemvalue="Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered" />
-        <item itemvalue="Gradle.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated" />
-        <item itemvalue="Gradle.ListCategoriesUseCaseIT" />
       </list>
     </recent_temporary>
   </component>
@@ -365,7 +367,8 @@
       <workItem from="1704211777283" duration="10944000" />
       <workItem from="1704242790420" duration="3710000" />
       <workItem from="1704303155408" duration="12498000" />
-      <workItem from="1704370208944" duration="9555000" />
+      <workItem from="1704370208944" duration="14593000" />
+      <workItem from="1704461706564" duration="1548000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -591,7 +594,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704312390239</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - Correction to createdAt ordered">
+      <option name="closed" value="true" />
+      <created>1704395165592</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1704395165592</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - ident">
+      <option name="closed" value="true" />
+      <created>1704395340696</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1704395340696</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,8 +629,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - Created Validation Basic" />
-    <MESSAGE value="Full Cycle 3 - Created Validation Basic completing tests" />
     <MESSAGE value="Full Cycle 3 - Application layer" />
     <MESSAGE value="Full Cycle 3 - Application layer more tests" />
     <MESSAGE value="Full Cycle 3 - Application layer tests use case update" />
@@ -635,7 +652,9 @@
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT - Correction of date accuracy with Intant now" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - Correction to totalElements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - Correction to totalElements" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - Correction to createdAt ordered" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - ident" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - ident" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
