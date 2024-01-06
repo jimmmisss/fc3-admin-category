@@ -1,4 +1,4 @@
-package com.fullcycle.admin.catalogo.infrastructure.api.controllers;
+package com.fullcycle.admin.catalogo.infrastructure.api;
 
 import com.fullcycle.admin.catalogo.infrastructure.category.models.CreateCategoryRequest;
 import io.swagger.v3.oas.annotations.Operation;

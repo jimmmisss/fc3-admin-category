@@ -4,6 +4,7 @@ import com.fullcycle.admin.catalogo.application.category.create.CreateCategoryCo
 import com.fullcycle.admin.catalogo.application.category.create.CreateCategoryOutput;
 import com.fullcycle.admin.catalogo.application.category.create.CreateCategoryUseCase;
 import com.fullcycle.admin.catalogo.domain.validation.handler.Notification;
+import com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPI;
 import com.fullcycle.admin.catalogo.infrastructure.category.models.CreateCategoryRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
