@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - API layer category - getById to return not found">
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - API layer category - updateById return status Ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/CategoryAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/CategoryAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/controllers/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/category/presenters/CategoryApiPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/category/presenters/CategoryApiPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/api/CategoryAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/api/CategoryAPITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,12 +96,16 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Gradle.CategoryAPITest.executor": "Run",
+    "Gradle.CategoryAPITest.givenACommandWithInvalidID_whenCallsUpdateCategory_shouldReturnNotFoundException.executor": "Run",
     "Gradle.CategoryAPITest.givenAInvalidCommand_whenCallsCreateCategory_thenShouldReturnDomainException.executor": "Run",
     "Gradle.CategoryAPITest.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor": "Run",
     "Gradle.CategoryAPITest.givenAInvalidName_whenCallsCreateCategory_thenShouldReturnNotification.executor": "Run",
+    "Gradle.CategoryAPITest.givenAInvalidName_whenCallsUpdateCategory_thenShouldReturnDomainException.executor": "Run",
     "Gradle.CategoryAPITest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId.executor": "Run",
     "Gradle.CategoryAPITest.givenAValidCommand_whenCallsUpdateCategory_shouldReturnCategoryId.executor": "Run",
+    "Gradle.CategoryAPITest.givenAValidId_whenCallsDeleteCategory_shouldReturnNoContent.executor": "Run",
     "Gradle.CategoryAPITest.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor": "Run",
+    "Gradle.CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories.executor": "Run",
     "Gradle.CategoryControllerTest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId.executor": "Run",
     "Gradle.DeleteCategoryUseCaseIT.executor": "Run",
     "Gradle.GetCategoryByIdUseCaseIT.executor": "Run",
@@ -177,8 +182,8 @@
       <recent name="com.fullcycle.admin.catalogo.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CategoryAPITest.givenAValidCommand_whenCallsUpdateCategory_shouldReturnCategoryId">
-    <configuration name="CategoryAPITest.givenAInvalidCommand_whenCallsCreateCategory_thenShouldReturnDomainException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories">
+    <configuration name="CategoryAPITest.givenACommandWithInvalidID_whenCallsUpdateCategory_shouldReturnNotFoundException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -191,7 +196,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenAInvalidCommand_whenCallsCreateCategory_thenShouldReturnDomainException&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenACommandWithInvalidID_whenCallsUpdateCategory_shouldReturnNotFoundException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,7 +207,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryAPITest.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryAPITest.givenAInvalidName_whenCallsUpdateCategory_thenShouldReturnDomainException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -215,31 +220,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="CategoryAPITest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenAInvalidName_whenCallsUpdateCategory_thenShouldReturnDomainException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -274,7 +255,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryAPITest.givenAValidId_whenCallsGetCategory_shouldReturnCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryAPITest.givenAValidId_whenCallsDeleteCategory_shouldReturnNoContent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -287,7 +268,31 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenAValidId_whenCallsGetCategory_shouldReturnCategory&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenAValidId_whenCallsDeleteCategory_shouldReturnNoContent&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":infrastructure:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.api.CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -307,11 +312,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories" />
+        <item itemvalue="Gradle.CategoryAPITest.givenAValidId_whenCallsDeleteCategory_shouldReturnNoContent" />
+        <item itemvalue="Gradle.CategoryAPITest.givenACommandWithInvalidID_whenCallsUpdateCategory_shouldReturnNotFoundException" />
+        <item itemvalue="Gradle.CategoryAPITest.givenAInvalidName_whenCallsUpdateCategory_thenShouldReturnDomainException" />
         <item itemvalue="Gradle.CategoryAPITest.givenAValidCommand_whenCallsUpdateCategory_shouldReturnCategoryId" />
-        <item itemvalue="Gradle.CategoryAPITest.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound" />
-        <item itemvalue="Gradle.CategoryAPITest.givenAValidId_whenCallsGetCategory_shouldReturnCategory" />
-        <item itemvalue="Gradle.CategoryAPITest.givenAInvalidCommand_whenCallsCreateCategory_thenShouldReturnDomainException" />
-        <item itemvalue="Gradle.CategoryAPITest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +396,8 @@
       <workItem from="1704370208944" duration="14593000" />
       <workItem from="1704461706564" duration="4977000" />
       <workItem from="1704541608284" duration="12797000" />
-      <workItem from="1704634557096" duration="5999000" />
+      <workItem from="1704634557096" duration="6175000" />
+      <workItem from="1704712138437" duration="3438000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -673,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704656016728</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Full Cycle 3 - API layer category - updateById return status Ok">
+      <option name="closed" value="true" />
+      <created>1704657248353</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1704657248353</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +706,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - Application layer tests use case get category" />
     <MESSAGE value="Full Cycle 3 - Application layer tests use case list categories" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer profiles config" />
@@ -717,7 +730,8 @@
     <MESSAGE value="Full Cycle 3 - API layer category - other tests create category" />
     <MESSAGE value="Full Cycle 3 - API layer category - getById return category" />
     <MESSAGE value="Full Cycle 3 - API layer category - getById to return not found" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - API layer category - getById to return not found" />
+    <MESSAGE value="Full Cycle 3 - API layer category - updateById return status Ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - API layer category - updateById return status Ok" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
