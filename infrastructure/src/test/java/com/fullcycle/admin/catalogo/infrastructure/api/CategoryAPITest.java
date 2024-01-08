@@ -295,7 +295,7 @@ public class CategoryAPITest {
         // then
         response.andExpect(status().isUnprocessableEntity())
                 .andExpect(header().string("Content-Type", MediaType.APPLICATION_JSON_VALUE))
-                .andExpect(jsonPath("$.errors", hasSize(1)))
+                .andExpect(jsonPath("$.errors", hasSize(expectedErrorCount)))
                 .andExpect(jsonPath("$.errors[0].message", equalTo(expectedMessage)));
 
         verify(updateCategoryUseCase, times(1)).execute(argThat(cmd ->
