@@ -114,5 +114,4 @@ public class CategoryController implements CategoryAPI {
         return listCategoriesUseCase.execute(new SearchQuery(page, perPage, search, sort, direction))
                 .map(CategoryApiPresenter::present);
     }
-
 }
