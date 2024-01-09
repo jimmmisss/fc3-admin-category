@@ -18,7 +18,6 @@ import com.fullcycle.admin.catalogo.infrastructure.category.models.CategoryRespo
 import com.fullcycle.admin.catalogo.infrastructure.category.models.CreateCategoryRequest;
 import com.fullcycle.admin.catalogo.infrastructure.category.models.UpdateCategoryRequest;
 import com.fullcycle.admin.catalogo.infrastructure.category.presenters.CategoryApiPresenter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,19 +27,14 @@ import java.util.function.Function;
 @RestController
 public class CategoryController implements CategoryAPI {
 
-    @Autowired
     private final CreateCategoryUseCase createCategoryUseCase;
 
-    @Autowired
     private final GetCategoryByIdUseCase getCategoryByIdUseCase;
 
-    @Autowired
     private final UpdateCategoryUseCase updateCategoryUseCase;
 
-    @Autowired
     private final DeleteCategoryUseCase deleteCategoryUseCase;
 
-    @Autowired
     private final ListCategoriesUseCase listCategoriesUseCase;
 
     public CategoryController(
@@ -57,7 +51,7 @@ public class CategoryController implements CategoryAPI {
     }
 
     @Override
-    public ResponseEntity<?> createCategory(CreateCategoryRequest input) {
+    public ResponseEntity<?> createCategory(final CreateCategoryRequest input) {
         final var aCommand = CreateCategoryCommand.with(
                 input.name(),
                 input.description(),
@@ -75,12 +69,12 @@ public class CategoryController implements CategoryAPI {
     }
 
     @Override
-    public CategoryResponse getById(String id) {
+    public CategoryResponse getById(final String id) {
         return CategoryApiPresenter.present(this.getCategoryByIdUseCase.execute(id));
     }
 
     @Override
-    public ResponseEntity<?> updateById(String id, UpdateCategoryRequest input) {
+    public ResponseEntity<?> updateById(final String id, final UpdateCategoryRequest input) {
         final var aCommand = UpdateCategoryCommand.with(
                 id,
                 input.name(),
@@ -99,7 +93,7 @@ public class CategoryController implements CategoryAPI {
     }
 
     @Override
-    public void deleteById(String id) {
+    public void deleteById(final String id) {
         this.deleteCategoryUseCase.execute(id);
     }
 

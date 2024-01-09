@@ -12,6 +12,6 @@ import java.lang.annotation.*;
 @Inherited
 @ActiveProfiles("test-integration")
 @SpringBootTest(classes = WebServerConfig.class)
-@ExtendWith(CleanUpExtensions.class)
+@ExtendWith(MySQLCleanUpExtensions.class)
 public @interface IntegrationTest {
 }

@@ -7,7 +7,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Collection;
 
-class CleanUpExtensions implements BeforeEachCallback {
+class MySQLCleanUpExtensions implements BeforeEachCallback {
 
         @Override
         public void beforeEach(final ExtensionContext context) {
