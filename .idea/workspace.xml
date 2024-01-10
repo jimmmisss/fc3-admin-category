@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Layer E2E - Create and List with pagination test">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/JacksonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/models/CategoryListResponseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/models/CategoryResponseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/models/CreateCategoryRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/models/UpdateCategoryRequestTest.java" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Layer E2E - Create and Solved error NotFoundException, create test json models and tests e2e">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/DefaultGetCategoryByIdUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/category/retrieve/get/DefaultGetCategoryByIdUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/exceptions/NoStackTraceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/exceptions/NoStackTraceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/controllers/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/controllers/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/controllers/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/CleanUpExtensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/MySQLCleanUpExtensions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/E2ETest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/E2ETest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/IntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/e2e/category/CategoryE2ETest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/e2e/category/CategoryE2ETest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/MainTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,12 +107,16 @@
     "Gradle.CategoryAPITest.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor": "Run",
     "Gradle.CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories.executor": "Run",
     "Gradle.CategoryControllerTest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToActivateACategoryByItsIdentifier.executor": "Run",
     "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToCreateANewCategoryWithValidValues.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToDeleteACategoryByItsIdentifier.executor": "Run",
     "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToGetACategoryByItsIdentifier.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToInactivateACategoryByItsIdentifier.executor": "Run",
     "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToNavigateToAllCategories.executor": "Run",
     "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSearchBetweenAllCategories.executor": "Run",
     "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSeeATreatedErrorByGettingANotFoundCategory.executor": "Run",
     "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSortAllCategoriesByDescriptionDesc.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToUpdateACategoryByItsIdentifier.executor": "Run",
     "Gradle.CategoryE2ETest.executor": "Run",
     "Gradle.CategoryListResponseTest.testMarshall.executor": "Run",
     "Gradle.CategoryResponseTest.executor": "Run",
@@ -211,8 +202,8 @@
       <recent name="com.fullcycle.admin.catalogo.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSeeATreatedErrorByGettingANotFoundCategory">
-    <configuration name="CategoryE2ETest.asACatalogAdminIShouldBeAbleToSeeATreatedErrorByGettingANotFoundCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.fc3-admin-category [test]">
+    <configuration name="CategoryE2ETest.asACatalogAdminIShouldBeAbleToActivateACategoryByItsIdentifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -225,7 +216,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.e2e.category.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSeeATreatedErrorByGettingANotFoundCategory&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.e2e.category.CategoryE2ETest.asACatalogAdminIShouldBeAbleToActivateACategoryByItsIdentifier&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,7 +227,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryListResponseTest.testMarshall" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryE2ETest.asACatalogAdminIShouldBeAbleToDeleteACategoryByItsIdentifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -249,7 +240,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.models.CategoryListResponseTest.testMarshall&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.e2e.category.CategoryE2ETest.asACatalogAdminIShouldBeAbleToDeleteACategoryByItsIdentifier&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -260,7 +251,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryResponseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryE2ETest.asACatalogAdminIShouldBeAbleToInactivateACategoryByItsIdentifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -273,7 +264,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.models.CategoryResponseTest&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.e2e.category.CategoryE2ETest.asACatalogAdminIShouldBeAbleToInactivateACategoryByItsIdentifier&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -284,7 +275,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UpdateCategoryRequestTest.testUnmarshall" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryE2ETest.asACatalogAdminIShouldBeAbleToUpdateACategoryByItsIdentifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -297,7 +288,7 @@
           <list>
             <option value=":infrastructure:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.infrastructure.models.UpdateCategoryRequestTest.testUnmarshall&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.e2e.category.CategoryE2ETest.asACatalogAdminIShouldBeAbleToUpdateACategoryByItsIdentifier&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -339,11 +330,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSeeATreatedErrorByGettingANotFoundCategory" />
         <item itemvalue="Gradle.fc3-admin-category [test]" />
-        <item itemvalue="Gradle.CategoryListResponseTest.testMarshall" />
-        <item itemvalue="Gradle.UpdateCategoryRequestTest.testUnmarshall" />
-        <item itemvalue="Gradle.CategoryResponseTest" />
+        <item itemvalue="Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToDeleteACategoryByItsIdentifier" />
+        <item itemvalue="Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToActivateACategoryByItsIdentifier" />
+        <item itemvalue="Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToInactivateACategoryByItsIdentifier" />
+        <item itemvalue="Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToUpdateACategoryByItsIdentifier" />
       </list>
     </recent_temporary>
   </component>
@@ -426,7 +417,7 @@
       <workItem from="1704634557096" duration="6175000" />
       <workItem from="1704712138437" duration="4556000" />
       <workItem from="1704795665619" duration="35000" />
-      <workItem from="1704795715267" duration="24965000" />
+      <workItem from="1704795715267" duration="27958000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -756,7 +747,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704806266680</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Full Cycle 3 - Layer E2E - Create and Solved error NotFoundException, create test json models and tests e2e">
+      <option name="closed" value="true" />
+      <created>1704834757190</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1704834757190</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,7 +774,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - Infrastructure layer add flyway" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - entity jpa and migration flyway" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - first test category" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository update" />
@@ -800,7 +798,8 @@
     <MESSAGE value="Full Cycle 3 - API layer category - optimize imports" />
     <MESSAGE value="Full Cycle 3 - Layer E2E - Structure config to test e2e" />
     <MESSAGE value="Full Cycle 3 - Layer E2E - Create and List with pagination test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Layer E2E - Create and List with pagination test" />
+    <MESSAGE value="Full Cycle 3 - Layer E2E - Create and Solved error NotFoundException, create test json models and tests e2e" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Layer E2E - Create and Solved error NotFoundException, create test json models and tests e2e" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
