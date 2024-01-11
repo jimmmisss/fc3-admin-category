@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Domain Genre - TDD Genre complete">
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Domain Genre - TDD Genre complete final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/fullcycle/admin/catalogo/domain/genre/GenreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/fullcycle/admin/catalogo/domain/genre/GenreTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -438,7 +437,7 @@
       <workItem from="1704795665619" duration="35000" />
       <workItem from="1704795715267" duration="28700000" />
       <workItem from="1704883708536" duration="1211000" />
-      <workItem from="1704963410730" duration="15540000" />
+      <workItem from="1704963410730" duration="17178000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -816,7 +815,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704996473246</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Full Cycle 3 - Domain Genre - TDD Genre complete final">
+      <option name="closed" value="true" />
+      <created>1704997549389</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1704997549389</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -835,7 +842,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository findById" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository search and pagination with specification" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application inject bean" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete" />
@@ -860,7 +866,8 @@
     <MESSAGE value="Full Cycle 3 - Domain Genre - Create GenreID" />
     <MESSAGE value="Full Cycle 3 - Domain Genre - TDD Genre" />
     <MESSAGE value="Full Cycle 3 - Domain Genre - TDD Genre complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Domain Genre - TDD Genre complete" />
+    <MESSAGE value="Full Cycle 3 - Domain Genre - TDD Genre complete final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Domain Genre - TDD Genre complete final" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
