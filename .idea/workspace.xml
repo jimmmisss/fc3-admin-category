@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Domain Genre - Create GenreID">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/exceptions/NotificationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/GenreValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/utils/InstantUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/fullcycle/admin/catalogo/domain/genre/GenreTest.java" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Domain Genre - TDD Genre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/fullcycle/admin/catalogo/domain/genre/GenreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/fullcycle/admin/catalogo/domain/genre/GenreTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +82,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/infrastructure/build.gradle" root0="SKIP_INSPECTION" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -129,8 +129,17 @@
     "Gradle.CreateCategoryRequestTest.executor": "Run",
     "Gradle.CreateCategoryRequestTest.testMarshall.executor": "Run",
     "Gradle.DeleteCategoryUseCaseIT.executor": "Run",
+    "Gradle.GenreTest.executor": "Run",
+    "Gradle.GenreTest.givenAInvalidNullAsCategoryID_whenCallAddCategory_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidActiveGenre_whenCallUpdateWithInactivate_shouldReceiveGenreUpdated.executor": "Run",
+    "Gradle.GenreTest.givenAValidEmptyCategoriesGenre_whenCallAddCategory_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithEmptyName_shouldReceiveNotificationException.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithNullCategories_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithNullName_shouldReceiveNotificationException.executor": "Run",
     "Gradle.GenreTest.givenAnActiveGenre_whenCallDeactivate_shouldReceiveOK.executor": "Run",
     "Gradle.GenreTest.givenAnInactiveGenre_whenCallActivate_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAnInvalidNullAsCategoryID_whenCallRemoveCategory_shouldReceiveOK.executor": "Run",
     "Gradle.GenreTest.givenInvalidEmptyName_whenCallNewGenreAndValidate_shouldReceiveAError.executor": "Run",
     "Gradle.GenreTest.givenInvalidNameWithLengthGreaterThan255_whenCallNewGenreAndValidate_shouldReceiveAError.executor": "Run",
     "Gradle.GenreTest.givenInvalidNullName_whenCallNewGenreAndValidate_shouldReceiveAError.executor": "Run",
@@ -237,7 +246,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GenreTest.givenAnActiveGenre_whenCallDeactivate_shouldReceiveOK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -250,7 +259,31 @@
           <list>
             <option value=":domain:test" />
             <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.domain.genre.GenreTest.givenAnActiveGenre_whenCallDeactivate_shouldReceiveOK&quot;" />
+            <option value="&quot;com.fullcycle.admin.catalogo.domain.genre.GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GenreTest.givenAValidGenre_whenCallUpdateWithNullName_shouldReceiveNotificationException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":domain:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.domain.genre.GenreTest.givenAValidGenre_whenCallUpdateWithNullName_shouldReceiveNotificationException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -285,52 +318,26 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GenreTest.givenInvalidEmptyName_whenCallNewGenreAndValidate_shouldReceiveAError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="fc3-admin-category [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.domain.genre.GenreTest.givenInvalidEmptyName_whenCallNewGenreAndValidate_shouldReceiveAError&quot;" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="GenreTest.givenInvalidNameWithLengthGreaterThan255_whenCallNewGenreAndValidate_shouldReceiveAError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":domain:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.domain.genre.GenreTest.givenInvalidNameWithLengthGreaterThan255_whenCallNewGenreAndValidate_shouldReceiveAError&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -344,9 +351,9 @@
       <list>
         <item itemvalue="Gradle.GenreTest" />
         <item itemvalue="Gradle.GenreTest.givenAnInactiveGenre_whenCallActivate_shouldReceiveOK" />
-        <item itemvalue="Gradle.GenreTest.givenAnActiveGenre_whenCallDeactivate_shouldReceiveOK" />
-        <item itemvalue="Gradle.GenreTest.givenInvalidNameWithLengthGreaterThan255_whenCallNewGenreAndValidate_shouldReceiveAError" />
-        <item itemvalue="Gradle.GenreTest.givenInvalidEmptyName_whenCallNewGenreAndValidate_shouldReceiveAError" />
+        <item itemvalue="Gradle.GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK" />
+        <item itemvalue="Gradle.fc3-admin-category [test]" />
+        <item itemvalue="Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithNullName_shouldReceiveNotificationException" />
       </list>
     </recent_temporary>
   </component>
@@ -431,7 +438,7 @@
       <workItem from="1704795665619" duration="35000" />
       <workItem from="1704795715267" duration="28700000" />
       <workItem from="1704883708536" duration="1211000" />
-      <workItem from="1704963410730" duration="5506000" />
+      <workItem from="1704963410730" duration="14461000" />
     </task>
     <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
       <option name="closed" value="true" />
@@ -793,7 +800,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704884198583</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Full Cycle 3 - Domain Genre - TDD Genre">
+      <option name="closed" value="true" />
+      <created>1704969111496</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1704969111496</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,7 +827,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository update" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository delete" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository findById" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - test category gateway and repository search and pagination with specification" />
@@ -837,7 +851,8 @@
     <MESSAGE value="Full Cycle 3 - Layer E2E - Create and Solved error NotFoundException, create test json models and tests e2e" />
     <MESSAGE value="Full Cycle 3 - Layer E2E - Delete, active, deactvive and update category" />
     <MESSAGE value="Full Cycle 3 - Domain Genre - Create GenreID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Domain Genre - Create GenreID" />
+    <MESSAGE value="Full Cycle 3 - Domain Genre - TDD Genre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Domain Genre - TDD Genre" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
