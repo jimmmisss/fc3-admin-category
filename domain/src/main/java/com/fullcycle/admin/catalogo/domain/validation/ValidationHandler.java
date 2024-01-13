@@ -24,7 +24,7 @@ public interface ValidationHandler {
         }
     }
 
-    public interface Validation<T> {
+    interface Validation<T> {
         T validate();
     }
 }

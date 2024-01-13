@@ -13,6 +13,10 @@ import org.mockito.*;
 import java.util.List;
 import java.util.Objects;
 
+import static org.mockito.AdditionalAnswers.returnsFirstArg;
+import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.Mockito.*;
+
 public class CreateGenreUseCaseTest extends UseCaseTest {
 
     @InjectMocks
@@ -31,33 +35,33 @@ public class CreateGenreUseCaseTest extends UseCaseTest {
 
     @Test
     public void givenAValidCommand_whenCallsCreateGenre_shouldReturnGenreId() {
-        // Given
-        final var expectedName = "Ação";
-        final var expectedActive = true;
+        // given
+        final var expectName = "Ação";
+        final var expectedIsActive = true;
         final var expectedCategories = List.<CategoryID>of();
 
         final var aCommand =
-                CreateGenreCommand.with(expectedName, expectedActive, asString(expectedCategories));
+                CreateGenreCommand.with(expectName, expectedIsActive, asString(expectedCategories));
 
-        Mockito.when(genreGateway.create(Mockito.any()))
-                .thenAnswer(AdditionalAnswers.returnsFirstArg());
+        when(genreGateway.create(any()))
+                .thenAnswer(returnsFirstArg());
 
-        // When
+        // when
         final var actualOutput = useCase.execute(aCommand);
 
-        // Then
+        // then
         Assertions.assertNotNull(actualOutput);
         Assertions.assertNotNull(actualOutput.id());
 
-        Mockito.verify(genreGateway, Mockito.times(1)).create(ArgumentMatchers.argThat(aGenre ->
-                Objects.equals(expectedName, aGenre.getName())
-                        && Objects.equals(expectedActive, aGenre.isActive())
+        Mockito.verify(genreGateway, times(1)).create(argThat(aGenre ->
+                Objects.equals(expectName, aGenre.getName())
+                        && Objects.equals(expectedIsActive, aGenre.isActive())
                         && Objects.equals(expectedCategories, aGenre.getCategories())
                         && Objects.nonNull(aGenre.getId())
                         && Objects.nonNull(aGenre.getCreatedAt())
                         && Objects.nonNull(aGenre.getUpdatedAt())
                         && Objects.isNull(aGenre.getDeletedAt())
-                ));
+        ));
     }
 
     private List<String> asString(final List<CategoryID> ids) {
