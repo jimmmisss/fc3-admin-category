@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Domain Genre - Gateway">
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/genre/CreateGenreCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/genre/CreateGenreOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/genre/CreateGenreUseCase.java" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Domain Genre - Structure UseCase">
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/fullcycle/admin/catalogo/application/genre/DefaultCreateGenreUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/test/java/com/fullcycle/admin/catalogo/application/genre/create/CreateGenreUseCaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/fullcycle/admin/catalogo/application/UseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/fullcycle/admin/catalogo/application/UseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/CategoryGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/category/CategoryGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/validation/ValidationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/validation/ValidationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/validation/handler/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/validation/handler/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/category/CategoryMySQLGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/category/CategoryMySQLGateway.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,101 +102,103 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.CategoryAPITest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenACommandWithInvalidID_whenCallsUpdateCategory_shouldReturnNotFoundException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAInvalidCommand_whenCallsCreateCategory_thenShouldReturnDomainException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAInvalidName_whenCallsCreateCategory_thenShouldReturnNotification.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAInvalidName_whenCallsUpdateCategory_thenShouldReturnDomainException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAValidCommand_whenCallsUpdateCategory_shouldReturnCategoryId.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAValidId_whenCallsDeleteCategory_shouldReturnNoContent.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryControllerTest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToActivateACategoryByItsIdentifier.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToCreateANewCategoryWithValidValues.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToDeleteACategoryByItsIdentifier.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToGetACategoryByItsIdentifier.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToInactivateACategoryByItsIdentifier.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToNavigateToAllCategories.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSearchBetweenAllCategories.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSeeATreatedErrorByGettingANotFoundCategory.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSortAllCategoriesByDescriptionDesc.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToUpdateACategoryByItsIdentifier.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryE2ETest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryListResponseTest.testMarshall.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryResponseTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryTest.givenAValidActiveCategory_whenCallDeactivate_thenReturnCategoryInactivated.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CategoryTest.givenAValidCategory_whenCallUpdateToInactive_thenReturnCategoryUpdated.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateCategoryRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateCategoryRequestTest.testMarshall.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteCategoryUseCaseIT.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAInvalidNullAsCategoryID_whenCallAddCategory_shouldReceiveOK.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAValidActiveGenre_whenCallUpdateWithInactivate_shouldReceiveGenreUpdated.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAValidEmptyCategoriesGenre_whenCallAddCategory_shouldReceiveOK.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithEmptyName_shouldReceiveNotificationException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithNullCategories_shouldReceiveOK.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithNullName_shouldReceiveNotificationException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAValidInactiveGenre_whenCallUpdateWithActivate_shouldReceiveGenreUpdated.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAnActiveGenre_whenCallDeactivate_shouldReceiveOK.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAnInactiveGenre_whenCallActivate_shouldReceiveOK.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenAnInvalidNullAsCategoryID_whenCallRemoveCategory_shouldReceiveOK.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenInvalidEmptyName_whenCallNewGenreAndValidate_shouldReceiveAError.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenInvalidNameWithLengthGreaterThan255_whenCallNewGenreAndValidate_shouldReceiveAError.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenInvalidNullName_whenCallNewGenreAndValidate_shouldReceiveAError.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GenreTest.givenValidParams_whenCallNewGenre_shouldInstantiateAGenre.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetCategoryByIdUseCaseIT.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ListCategoriesUseCaseIT.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenTermDoesntMatchsPrePersisted_shouldReturnEmptyPage.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.MainTest.testMain.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateCategoryRequestTest.testUnmarshall.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fc3-admin-category [check].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fc3-admin-category [test].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fc3-admin-category:infrastructure [:infrastructure:GetCategoryByIdUseCaseIT.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fc3-admin-category:infrastructure [:infrastructure:ListCategoriesUseCaseIT.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/java/fc3-admin-category/infrastructure/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.CategoryAPITest.executor": "Run",
+    "Gradle.CategoryAPITest.givenACommandWithInvalidID_whenCallsUpdateCategory_shouldReturnNotFoundException.executor": "Run",
+    "Gradle.CategoryAPITest.givenAInvalidCommand_whenCallsCreateCategory_thenShouldReturnDomainException.executor": "Run",
+    "Gradle.CategoryAPITest.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor": "Run",
+    "Gradle.CategoryAPITest.givenAInvalidName_whenCallsCreateCategory_thenShouldReturnNotification.executor": "Run",
+    "Gradle.CategoryAPITest.givenAInvalidName_whenCallsUpdateCategory_thenShouldReturnDomainException.executor": "Run",
+    "Gradle.CategoryAPITest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId.executor": "Run",
+    "Gradle.CategoryAPITest.givenAValidCommand_whenCallsUpdateCategory_shouldReturnCategoryId.executor": "Run",
+    "Gradle.CategoryAPITest.givenAValidId_whenCallsDeleteCategory_shouldReturnNoContent.executor": "Run",
+    "Gradle.CategoryAPITest.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor": "Run",
+    "Gradle.CategoryAPITest.givenValidParams_whenCallsListCategories_shouldReturnCategories.executor": "Run",
+    "Gradle.CategoryControllerTest.givenAValidCommand_whenCallsCreateCategory_shouldReturnCategoryId.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToActivateACategoryByItsIdentifier.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToCreateANewCategoryWithValidValues.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToDeleteACategoryByItsIdentifier.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToGetACategoryByItsIdentifier.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToInactivateACategoryByItsIdentifier.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToNavigateToAllCategories.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSearchBetweenAllCategories.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSeeATreatedErrorByGettingANotFoundCategory.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToSortAllCategoriesByDescriptionDesc.executor": "Run",
+    "Gradle.CategoryE2ETest.asACatalogAdminIShouldBeAbleToUpdateACategoryByItsIdentifier.executor": "Run",
+    "Gradle.CategoryE2ETest.executor": "Run",
+    "Gradle.CategoryListResponseTest.testMarshall.executor": "Run",
+    "Gradle.CategoryResponseTest.executor": "Run",
+    "Gradle.CategoryTest.givenAValidActiveCategory_whenCallDeactivate_thenReturnCategoryInactivated.executor": "Run",
+    "Gradle.CategoryTest.givenAValidCategory_whenCallUpdateToInactive_thenReturnCategoryUpdated.executor": "Run",
+    "Gradle.CreateCategoryRequestTest.executor": "Run",
+    "Gradle.CreateCategoryRequestTest.testMarshall.executor": "Run",
+    "Gradle.CreateGenreUseCaseTest.givenAValidCommand_whenCallsCreateGenre_shouldReturnGenreId.executor": "Run",
+    "Gradle.DeleteCategoryUseCaseIT.executor": "Run",
+    "Gradle.GenreTest.executor": "Run",
+    "Gradle.GenreTest.givenAInvalidNullAsCategoryID_whenCallAddCategory_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidActiveGenre_whenCallUpdateWithInactivate_shouldReceiveGenreUpdated.executor": "Run",
+    "Gradle.GenreTest.givenAValidEmptyCategoriesGenre_whenCallAddCategory_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithEmptyName_shouldReceiveNotificationException.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithNullCategories_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAValidGenre_whenCallUpdateWithNullName_shouldReceiveNotificationException.executor": "Run",
+    "Gradle.GenreTest.givenAValidInactiveGenre_whenCallUpdateWithActivate_shouldReceiveGenreUpdated.executor": "Run",
+    "Gradle.GenreTest.givenAnActiveGenre_whenCallDeactivate_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAnInactiveGenre_whenCallActivate_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenAnInvalidNullAsCategoryID_whenCallRemoveCategory_shouldReceiveOK.executor": "Run",
+    "Gradle.GenreTest.givenInvalidEmptyName_whenCallNewGenreAndValidate_shouldReceiveAError.executor": "Run",
+    "Gradle.GenreTest.givenInvalidNameWithLengthGreaterThan255_whenCallNewGenreAndValidate_shouldReceiveAError.executor": "Run",
+    "Gradle.GenreTest.givenInvalidNullName_whenCallNewGenreAndValidate_shouldReceiveAError.executor": "Run",
+    "Gradle.GenreTest.givenValidParams_whenCallNewGenre_shouldInstantiateAGenre.executor": "Run",
+    "Gradle.GetCategoryByIdUseCaseIT.executor": "Run",
+    "Gradle.GetCategoryByIdUseCaseIT.givenAInvalidId_whenCallsGetCategory_shouldReturnNotFound.executor": "Run",
+    "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenCallsGetCategory_shouldReturnCategory.executor": "Run",
+    "Gradle.GetCategoryByIdUseCaseIT.givenAValidId_whenGatewayThrowsException_shouldReturnException.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidPage_whenCallsListCategories_shouldReturnCategoriesPaginated.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidSortAndDirection_whenCallsListCategories_thenShouldReturnCategoriesOrdered.executor": "Run",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenCallsListCategories_shouldReturnCategoriesFiltered.executor": "Debug",
+    "Gradle.ListCategoriesUseCaseIT.givenAValidTerm_whenTermDoesntMatchsPrePersisted_shouldReturnEmptyPage.executor": "Debug",
+    "Gradle.MainTest.testMain.executor": "Run",
+    "Gradle.UpdateCategoryRequestTest.testUnmarshall.executor": "Run",
+    "Gradle.fc3-admin-category [check].executor": "Run",
+    "Gradle.fc3-admin-category [test].executor": "Run",
+    "Gradle.fc3-admin-category:application [:application:DefaultCreateGenreUseCase.main()].executor": "Debug",
+    "Gradle.fc3-admin-category:infrastructure [:infrastructure:GetCategoryByIdUseCaseIT.main()].executor": "Run",
+    "Gradle.fc3-admin-category:infrastructure [:infrastructure:ListCategoriesUseCaseIT.main()].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projects/java/fc3-admin-category/infrastructure/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.fullcycle.admin.catalogo.domain.exceptions" />
@@ -223,7 +230,44 @@
       <recent name="com.fullcycle.admin.catalogo.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GenreTest">
+  <component name="RunManager" selected="Gradle.CreateGenreUseCaseTest.givenAValidCommand_whenCallsCreateGenre_shouldReturnGenreId">
+    <configuration name="DefaultCreateGenreUseCase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fullcycle.admin.catalogo.application.genre.DefaultCreateGenreUseCase" />
+      <module name="fc3-admin-catalogo.application.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fullcycle.admin.catalogo.application.genre.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateGenreUseCaseTest.givenAValidCommand_whenCallsCreateGenre_shouldReturnGenreId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":application:test" />
+            <option value="--tests" />
+            <option value="&quot;com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest.givenAValidCommand_whenCallsCreateGenre_shouldReturnGenreId&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="GenreTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -238,30 +282,6 @@
             <option value=":domain:test" />
             <option value="--tests" />
             <option value="&quot;com.fullcycle.admin.catalogo.domain.genre.GenreTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":domain:test" />
-            <option value="--tests" />
-            <option value="&quot;com.fullcycle.admin.catalogo.domain.genre.GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -320,28 +340,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="fc3-admin-category [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="fc3-admin-catalogo.infrastructure.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fullcycle.admin.catalogo.infrastructure.Main" />
@@ -351,11 +349,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CreateGenreUseCaseTest.givenAValidCommand_whenCallsCreateGenre_shouldReturnGenreId" />
+        <item itemvalue="Application.DefaultCreateGenreUseCase" />
         <item itemvalue="Gradle.GenreTest" />
         <item itemvalue="Gradle.GenreTest.givenAValidInactiveGenre_whenCallUpdateWithActivate_shouldReceiveGenreUpdated" />
         <item itemvalue="Gradle.GenreTest.givenAnInactiveGenre_whenCallActivate_shouldReceiveOK" />
-        <item itemvalue="Gradle.GenreTest.givenAValidGenreWithTwoCategories_whenCallRemoveCategory_shouldReceiveOK" />
-        <item itemvalue="Gradle.fc3-admin-category [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -441,15 +439,9 @@
       <workItem from="1704795715267" duration="28700000" />
       <workItem from="1704883708536" duration="1211000" />
       <workItem from="1704963410730" duration="18071000" />
-      <workItem from="1705060171249" duration="798000" />
-    </task>
-    <task id="LOCAL-00001" summary="Full Cycle 3 - Created Aggregate Root">
-      <option name="closed" value="true" />
-      <created>1691800236629</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1691800236629</updated>
+      <workItem from="1705060171249" duration="2031000" />
+      <workItem from="1705150654696" duration="758000" />
+      <workItem from="1705154794966" duration="11437000" />
     </task>
     <task id="LOCAL-00002" summary="Full Cycle 3 - Created Validation Basic">
       <option name="closed" value="true" />
@@ -835,7 +827,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705000390064</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Full Cycle 3 - Domain Genre - Structure UseCase">
+      <option name="closed" value="true" />
+      <created>1705060993308</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1705060993309</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -854,7 +854,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application inject bean" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - connect infra with application test integration delete" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - GetCategoryByIdUseCaseIT - Correction of date accuracy with Intant now" />
@@ -879,7 +878,8 @@
     <MESSAGE value="Full Cycle 3 - Domain Genre - TDD Genre complete" />
     <MESSAGE value="Full Cycle 3 - Domain Genre - TDD Genre complete final" />
     <MESSAGE value="Full Cycle 3 - Domain Genre - Gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Domain Genre - Gateway" />
+    <MESSAGE value="Full Cycle 3 - Domain Genre - Structure UseCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Domain Genre - Structure UseCase" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

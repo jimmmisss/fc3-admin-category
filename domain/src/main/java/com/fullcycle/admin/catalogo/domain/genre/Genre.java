@@ -147,6 +147,15 @@ public class Genre extends AggregateRoot<GenreID> {
         return this;
     }
 
+    public Genre addCategories(List<CategoryID> categories) {
+        if (categories == null || categories.isEmpty()) {
+            return this;
+        }
+        this.categories.addAll(categories);
+        this.updatedAt = InstantUtils.now();
+        return this;
+    }
+
     public Genre removeCategory(CategoryID aCategoryID) {
         if (aCategoryID == null) {
             return this;
