@@ -64,6 +64,42 @@ public class CreateGenreUseCaseTest extends UseCaseTest {
         ));
     }
 
+    @Test
+    public void givenAValidCommandWithCategories_whenCallsCreateGenre_shouldReturnGenreId() {
+        // given
+        final var expectName = "Ação";
+        final var expectedIsActive = true;
+        final var expectedCategories = List.of(
+                CategoryID.from("123"),
+                CategoryID.from("456"));
+
+        final var aCommand =
+                CreateGenreCommand.with(expectName, expectedIsActive, asString(expectedCategories));
+
+        when(categoryGateway.existsByIds(any()))
+                .thenReturn(expectedCategories);
+
+        when(genreGateway.create(any()))
+                .thenAnswer(returnsFirstArg());
+
+        // when
+        final var actualOutput = useCase.execute(aCommand);
+
+        // then
+        Assertions.assertNotNull(actualOutput);
+        Assertions.assertNotNull(actualOutput.id());
+
+        Mockito.verify(genreGateway, times(1)).create(argThat(aGenre ->
+                Objects.equals(expectName, aGenre.getName())
+                        && Objects.equals(expectedIsActive, aGenre.isActive())
+                        && Objects.equals(expectedCategories, aGenre.getCategories())
+                        && Objects.nonNull(aGenre.getId())
+                        && Objects.nonNull(aGenre.getCreatedAt())
+                        && Objects.nonNull(aGenre.getUpdatedAt())
+                        && Objects.isNull(aGenre.getDeletedAt())
+        ));
+    }
+
     private List<String> asString(final List<CategoryID> ids) {
         return ids.stream()
                 .map(CategoryID::getValue)
