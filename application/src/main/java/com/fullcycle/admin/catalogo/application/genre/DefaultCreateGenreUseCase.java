@@ -63,7 +63,7 @@ public class DefaultCreateGenreUseCase extends CreateGenreUseCase {
             System.out.println(missingIds);
 
             final var missingIdsMessage = missingIds.stream()
-                    .map(CategoryID::toString)
+                    .map(CategoryID::getValue)
                     .collect(Collectors.joining(", "));
 
             notification.append(new Error("Some categories could not be found: %s".formatted(missingIdsMessage)));

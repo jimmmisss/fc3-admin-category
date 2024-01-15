@@ -147,13 +147,14 @@ class CategoryTest {
     }
 
     @Test
-    public void givenAValidActiveCategory_whenCallDeactivate_thenReturnCategoryInactivated() {
+    public void givenAValidActiveCategory_whenCallDeactivate_thenReturnCategoryInactivated() throws Exception {
         final var expectedName = "Filmes";
         final var expectedDescription = "A categoria mais assistida";
         final var expectedIsActive = false;
 
         final var aCategory =
                 Category.newCategory(expectedName, expectedDescription, true);
+        Thread.sleep(1000);
 
         assertDoesNotThrow(() -> aCategory.validate(new ThrowsValidationHandler()));
 
@@ -207,13 +208,14 @@ class CategoryTest {
     }
 
     @Test
-    public void givenAValidCategory_whenCallUpdateToInactive_thenReturnCategoryUpdated() {
+    public void givenAValidCategory_whenCallUpdateToInactive_thenReturnCategoryUpdated() throws Exception {
         final var expectedName = "Filmes";
         final var expectedDescription = "A categoria mais assistida";
         final var expectedIsActive = false;
 
         final var aCategory =
                 Category.newCategory("Film", "A categoria", true);
+        Thread.sleep(1000);
 
         assertDoesNotThrow(() -> aCategory.validate(new ThrowsValidationHandler()));
         assertTrue(aCategory.isActive());
@@ -236,13 +238,14 @@ class CategoryTest {
     }
 
     @Test
-    public void givenAValidCategory_whenCallUpdateWithInvalidParams_thenReturnCategoryUpdated() {
+    public void givenAValidCategory_whenCallUpdateWithInvalidParams_thenReturnCategoryUpdated() throws Exception {
         final String expectedName = null;
         final var expectedDescription = "A categoria mais assistida";
         final var expectedIsActive = true;
 
         final var aCategory =
                 Category.newCategory("Filmes", "A categoria", expectedIsActive);
+        Thread.sleep(1000);
 
         assertDoesNotThrow(() -> aCategory.validate(new ThrowsValidationHandler()));
 
