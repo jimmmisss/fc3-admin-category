@@ -47,7 +47,7 @@ public class Genre extends AggregateRoot<GenreID> {
         return new Genre(anId, aName, isActive, new ArrayList<>(), now, now, deletedAt);
     }
 
-    public Genre with(
+    public static Genre with(
             final GenreID anId,
             final String aName,
             final boolean isActive,
