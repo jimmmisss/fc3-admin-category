@@ -13,7 +13,7 @@ import java.lang.annotation.*;
 @Inherited
 @ActiveProfiles("test-e2e")
 @SpringBootTest(classes = WebServerConfig.class)
-@ExtendWith(MySQLCleanUpExtensions.class)
+@ExtendWith(MySQLCleanUpExtension.class)
 @AutoConfigureMockMvc
 public @interface E2ETest {
 }
