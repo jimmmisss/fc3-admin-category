@@ -55,4 +55,5 @@ public class GenreCategoryJpaEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }

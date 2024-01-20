@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure Genre - creatinf structure">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/genre/persistence/GenreCategoryID.java" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure Genre - creating +structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/fullcycle/admin/catalogo/domain/genre/Genre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/genre/persistence/GenreCategoryJpaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/genre/persistence/GenreCategoryJpaEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/genre/persistence/GenreJpaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/genre/persistence/GenreJpaEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -458,15 +455,8 @@
       <workItem from="1705246218425" duration="621000" />
       <workItem from="1705314652390" duration="6921000" />
       <workItem from="1705490676666" duration="2708000" />
-      <workItem from="1705577314895" duration="2121000" />
-    </task>
-    <task id="LOCAL-00007" summary="Full Cycle 3 - Application layer tests use case update">
-      <option name="closed" value="true" />
-      <created>1700849991328</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1700849991328</updated>
+      <workItem from="1705577314895" duration="3347000" />
+      <workItem from="1705715854412" duration="442000" />
     </task>
     <task id="LOCAL-00008" summary="Full Cycle 3 - Application layer tests use case update - CleanUp">
       <option name="closed" value="true" />
@@ -852,7 +842,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705491505921</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Full Cycle 3 - Infrastructure Genre - creating +structure">
+      <option name="closed" value="true" />
+      <created>1705579450867</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1705579450868</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -871,7 +869,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - Correction to createdAt ordered" />
     <MESSAGE value="Full Cycle 3 - Infrastructure layer category - ListCategoriesUseCaseIT - ident" />
     <MESSAGE value="Full Cycle 3 - API layer category - created annotation test" />
     <MESSAGE value="Full Cycle 3 - API layer category - test and resource create category" />
@@ -896,7 +893,8 @@
     <MESSAGE value="Full Cycle 3 - Domain Genre - Test create genre with categories" />
     <MESSAGE value="Full Cycle 3 - Usecase Genre - Test create genre finished" />
     <MESSAGE value="Full Cycle 3 - Infrastructure Genre - creatinf structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure Genre - creatinf structure" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure Genre - creating +structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure Genre - creating +structure" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
