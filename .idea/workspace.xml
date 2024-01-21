@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure Genre - creating method findAll with specification" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure Genre - renamad class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/MySQLGatewayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/MySQLGatewayTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -454,14 +457,8 @@
       <workItem from="1705490676666" duration="2708000" />
       <workItem from="1705577314895" duration="3347000" />
       <workItem from="1705715854412" duration="744000" />
-    </task>
-    <task id="LOCAL-00009" summary="Full Cycle 3 - Application layer tests use case delete category">
-      <option name="closed" value="true" />
-      <created>1701004839743</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1701004839743</updated>
+      <workItem from="1705742358874" duration="254000" />
+      <workItem from="1705830297301" duration="458000" />
     </task>
     <task id="LOCAL-00010" summary="Full Cycle 3 - Application layer tests use case delete category">
       <option name="closed" value="true" />
@@ -847,7 +844,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705716548469</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Full Cycle 3 - Infrastructure Genre - renamad class">
+      <option name="closed" value="true" />
+      <created>1705742584007</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1705742584007</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -866,7 +871,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - API layer category - created annotation test" />
     <MESSAGE value="Full Cycle 3 - API layer category - test and resource create category" />
     <MESSAGE value="Full Cycle 3 - API layer category - other tests create category" />
     <MESSAGE value="Full Cycle 3 - API layer category - getById return category" />
@@ -891,7 +895,8 @@
     <MESSAGE value="Full Cycle 3 - Infrastructure Genre - creatinf structure" />
     <MESSAGE value="Full Cycle 3 - Infrastructure Genre - creating +structure" />
     <MESSAGE value="Full Cycle 3 - Infrastructure Genre - creating method findAll with specification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure Genre - creating method findAll with specification" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure Genre - renamad class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure Genre - renamad class" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
