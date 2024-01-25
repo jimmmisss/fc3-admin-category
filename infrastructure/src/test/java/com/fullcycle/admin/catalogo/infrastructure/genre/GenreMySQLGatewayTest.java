@@ -1,11 +1,16 @@
 package com.fullcycle.admin.catalogo.infrastructure.genre;
 
 import com.fullcycle.admin.catalogo.MySQLGatewayTest;
+import com.fullcycle.admin.catalogo.domain.category.Category;
+import com.fullcycle.admin.catalogo.domain.genre.Genre;
 import com.fullcycle.admin.catalogo.infrastructure.category.CategoryMySQLGateway;
+import com.fullcycle.admin.catalogo.infrastructure.genre.persistence.GenreMySQLGateway;
 import com.fullcycle.admin.catalogo.infrastructure.genre.persistence.GenreRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 @MySQLGatewayTest
 public class GenreMySQLGatewayTest {
@@ -14,7 +19,7 @@ public class GenreMySQLGatewayTest {
     private CategoryMySQLGateway categoryMySQLGateway;
 
     @Autowired
-    private GenreMySQLGateway genreMySQLGateway;
+    private GenreMySQLGateway genreGateway;
 
     @Autowired
     private GenreRepository genreRepository;
@@ -22,7 +27,46 @@ public class GenreMySQLGatewayTest {
     @Test
     public void testDependenciesInjected() {
         Assertions.assertNotNull(this.categoryMySQLGateway);
-        Assertions.assertNotNull(this.genreMySQLGateway);
+        Assertions.assertNotNull(this.genreGateway);
         Assertions.assertNotNull(this.genreRepository);
+    }
+
+    @Test
+    public void givenAValidGenre_whenCallsCreateGenre_shouldPersistGenre() {
+        final var filmes =
+                categoryMySQLGateway.create(Category.newCategory("Filmes", null, true));
+
+        final var expectedName = "Ação";
+        final var expectedIsActive = true;
+        final var expectedCategories = List.of(filmes.getId());
+
+        final var aGenre = Genre.newGenre(expectedName, expectedIsActive);
+        aGenre.addCategories(expectedCategories);
+
+        final var expectedId = aGenre.getId();
+
+        Assertions.assertEquals(0, genreRepository.count());
+
+        final var actualGenre = genreGateway.create(aGenre);
+
+        Assertions.assertEquals(1, genreRepository.count());
+
+        Assertions.assertEquals(expectedId, actualGenre.getId());
+        Assertions.assertEquals(expectedName, actualGenre.getName());
+        Assertions.assertEquals(expectedIsActive, actualGenre.isActive());
+        Assertions.assertEquals(expectedCategories, actualGenre.getCategories());
+        Assertions.assertEquals(aGenre.getCreatedAt(), actualGenre.getCreatedAt());
+        Assertions.assertEquals(aGenre.getUpdatedAt(), actualGenre.getUpdatedAt());
+        Assertions.assertEquals(aGenre.getDeletedAt(), actualGenre.getDeletedAt());
+        Assertions.assertNull(actualGenre.getDeletedAt());
+
+        final var persistedGenre = genreRepository.findById(expectedId.getValue()).get();
+
+        Assertions.assertEquals(expectedName, persistedGenre.getName());
+        Assertions.assertEquals(expectedIsActive, persistedGenre.isActive());
+        Assertions.assertEquals(expectedCategories, persistedGenre.getCategoryIDs());
+        Assertions.assertEquals(aGenre.getCreatedAt(), persistedGenre.getCreatedAt());
+        Assertions.assertEquals(aGenre.getUpdatedAt(), persistedGenre.getUpdatedAt());
+        Assertions.assertNull(persistedGenre.getDeletedAt());
     }
 }

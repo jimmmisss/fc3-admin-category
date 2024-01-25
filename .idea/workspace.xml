@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure Genre - Create GenreMySQLGatewayTest">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/genre/persistence/GenreMySQLGateway.java" afterDir="false" />
+    <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure Genre - Create Impl GenreMySQLGateway">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/genre/GenreMySQLGatewayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/genre/GenreMySQLGatewayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,15 +462,8 @@
       <workItem from="1705830297301" duration="10182000" />
       <workItem from="1705938204491" duration="1381000" />
       <workItem from="1706022192395" duration="5335000" />
-      <workItem from="1706134387841" duration="1292000" />
-    </task>
-    <task id="LOCAL-00015" summary="Full Cycle 3 - Infrastructure layer database">
-      <option name="closed" value="true" />
-      <created>1701267131738</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1701267131738</updated>
+      <workItem from="1706134387841" duration="1557000" />
+      <workItem from="1706180174492" duration="1951000" />
     </task>
     <task id="LOCAL-00016" summary="Full Cycle 3 - Infrastructure layer add flyway">
       <option name="closed" value="true" />
@@ -856,7 +849,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706024406468</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Full Cycle 3 - Infrastructure Genre - Create Impl GenreMySQLGateway">
+      <option name="closed" value="true" />
+      <created>1706135726623</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1706135726624</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -875,7 +876,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Full Cycle 3 - API layer category - updateById return status Ok" />
     <MESSAGE value="Full Cycle 3 - API layer category - list pagaination and delete" />
     <MESSAGE value="Full Cycle 3 - API layer category - optimize imports" />
     <MESSAGE value="Full Cycle 3 - Layer E2E - Structure config to test e2e" />
@@ -900,7 +900,8 @@
     <MESSAGE value="Full Cycle 3 - Infrastructure Genre - Test persistence category" />
     <MESSAGE value="Full Cycle 3 - Infrastructure Genre - Created genres table in flyway" />
     <MESSAGE value="Full Cycle 3 - Infrastructure Genre - Create GenreMySQLGatewayTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure Genre - Create GenreMySQLGatewayTest" />
+    <MESSAGE value="Full Cycle 3 - Infrastructure Genre - Create Impl GenreMySQLGateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Cycle 3 - Infrastructure Genre - Create Impl GenreMySQLGateway" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc3_admin_catalogo$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1701529297914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
