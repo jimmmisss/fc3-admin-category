@@ -59,7 +59,7 @@ public class Genre extends AggregateRoot<GenreID> {
         return new Genre(anId, aName, isActive, categories, aCreatedAt, aUpdatedAt, aDeletedAt);
     }
 
-    public Genre with(Genre aGenre) {
+    public static Genre with(Genre aGenre) {
         return new Genre(
                 aGenre.getId(),
                 aGenre.getName(),
