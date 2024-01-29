@@ -204,6 +204,47 @@ public class GenreMySQLGatewayTest {
         Assertions.assertNull(persistedGenre.getDeletedAt());
     }
 
+    @Test
+    public void givenAValidGenreInactive_whenCallsUpdateGenreActivating_shouldPersistGenre() {
+        final var expectedName = "Ação";
+        final var expectedIsActive = true;
+        final var expectedCategories = List.<CategoryID>of();
+
+        final var aGenre = Genre.newGenre(expectedName, false);
+
+        final var expectedId = aGenre.getId();
+
+        Assertions.assertEquals(0, genreRepository.count());
+
+        genreRepository.saveAndFlush(GenreJpaEntity.from(aGenre));
+
+        Assertions.assertEquals(1, genreRepository.count());
+        Assertions.assertNotNull(aGenre.getDeletedAt());
+
+        final var actualGenre = genreGateway.update(
+                Genre.with(aGenre).update(expectedName, expectedIsActive, expectedCategories)
+        );
+
+        Assertions.assertEquals(1, genreRepository.count());
+
+        Assertions.assertEquals(expectedId, actualGenre.getId());
+        Assertions.assertEquals(expectedName, actualGenre.getName());
+        Assertions.assertEquals(expectedIsActive, actualGenre.isActive());
+        Assertions.assertEquals(expectedCategories, actualGenre.getCategories());
+        Assertions.assertEquals(aGenre.getCreatedAt(), actualGenre.getCreatedAt());
+        Assertions.assertTrue(aGenre.getUpdatedAt().isBefore(actualGenre.getUpdatedAt()));
+        Assertions.assertNull(actualGenre.getDeletedAt());
+
+        final var persistedGenre = genreRepository.findById(expectedId.getValue()).get();
+
+        Assertions.assertEquals(expectedName, persistedGenre.getName());
+        Assertions.assertEquals(expectedIsActive, persistedGenre.isActive());
+        Assertions.assertEquals(expectedCategories, persistedGenre.getCategoryIDs());
+        Assertions.assertEquals(aGenre.getCreatedAt(), persistedGenre.getCreatedAt());
+        Assertions.assertTrue(aGenre.getUpdatedAt().isBefore(persistedGenre.getUpdatedAt()));
+        Assertions.assertNull(persistedGenre.getDeletedAt());
+    }
+
     private List<CategoryID> sorted(final List<CategoryID> categories) {
         return categories.stream()
                 .sorted(Comparator.comparing(CategoryID::getValue))
