@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac92fc54-52f9-4624-a22a-94c199f59c97" name="Changes" comment="Full Cycle 3 - Infrastructure Genre - Tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/genre/GenreMySQLGatewayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/fullcycle/admin/catalogo/infrastructure/genre/GenreMySQLGatewayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -467,15 +468,8 @@
       <workItem from="1706303402463" duration="325000" />
       <workItem from="1706392749800" duration="1210000" />
       <workItem from="1706468554652" duration="434000" />
-      <workItem from="1706567240389" duration="394000" />
-    </task>
-    <task id="LOCAL-00019" summary="Full Cycle 3 - Infrastructure layer category - test category gateway and repository update">
-      <option name="closed" value="true" />
-      <created>1701617031666</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1701617031667</updated>
+      <workItem from="1706567240389" duration="416000" />
+      <workItem from="1706701621706" duration="1632000" />
     </task>
     <task id="LOCAL-00020" summary="Full Cycle 3 - Infrastructure layer category - test category gateway and repository delete">
       <option name="closed" value="true" />
@@ -861,7 +855,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706393627755</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Full Cycle 3 - Infrastructure Genre - Tests">
+      <option name="closed" value="true" />
+      <created>1706567638341</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1706567638341</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
