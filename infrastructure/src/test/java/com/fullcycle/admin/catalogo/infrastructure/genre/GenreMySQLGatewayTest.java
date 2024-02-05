@@ -287,44 +287,19 @@ public class GenreMySQLGatewayTest {
     }
 
     @Test
-    public void bla() {
-        final var expectedName = "Ação";
-        final var expectedIsActive = false;
-        final var expectedCategories = List.<CategoryID>of();
-
-        final var aGenre = Genre.newGenre(expectedName, true);
-
-        final var expectedId = aGenre.getId();
-
-        Assertions.assertEquals(0, genreRepository.count());
+    public void givenAPrePersistedGenre_whenCallsDeleteById_shouldDeleteGenre() {
+        // given
+        final var aGenre = Genre.newGenre("Ação", true);
 
         genreRepository.saveAndFlush(GenreJpaEntity.from(aGenre));
 
-        Assertions.assertTrue(aGenre.isActive());
-        Assertions.assertNull(aGenre.getDeletedAt());
-
-        final var actualGenre = genreGateway.update(
-                Genre.with(aGenre).update(expectedName, expectedIsActive, expectedCategories)
-        );
-
         Assertions.assertEquals(1, genreRepository.count());
 
-        Assertions.assertEquals(expectedId, actualGenre.getId());
-        Assertions.assertEquals(expectedName, actualGenre.getName());
-        Assertions.assertEquals(expectedIsActive, actualGenre.isActive());
-        Assertions.assertEquals(expectedCategories, actualGenre.getCategories());
-        Assertions.assertEquals(aGenre.getCreatedAt(), actualGenre.getCreatedAt());
-        Assertions.assertTrue(aGenre.getUpdatedAt().isBefore(actualGenre.getUpdatedAt()));
-        Assertions.assertNotNull(actualGenre.getDeletedAt());
+        // when
+        genreGateway.deleteById(aGenre.getId());
 
-        final var persistedGenre = genreRepository.findById(expectedId.getValue()).get();
-
-        Assertions.assertEquals(expectedName, persistedGenre.getName());
-        Assertions.assertEquals(expectedIsActive, persistedGenre.isActive());
-        Assertions.assertEquals(expectedCategories, persistedGenre.getCategoryIDs());
-        Assertions.assertEquals(aGenre.getCreatedAt(), persistedGenre.getCreatedAt());
-        Assertions.assertTrue(aGenre.getUpdatedAt().isBefore(persistedGenre.getUpdatedAt()));
-        Assertions.assertNotNull(persistedGenre.getDeletedAt());
+        // then
+        Assertions.assertEquals(0, genreRepository.count());
     }
 
     private List<CategoryID> sorted(final List<CategoryID> categories) {
